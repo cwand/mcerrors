@@ -5,7 +5,9 @@ Summary: Monte Carlo error propagation
 Home-page: https://github.com/cwand/McErrors
 Author: Chris Walther Andersen
 Author-email: cvvand@gmail.com
+License: UNKNOWN
 Project-URL: Bug Tracker, https://github.com/cwand/mcerrors/issues
+Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
@@ -15,3 +17,5 @@ Provides-Extra: testing
 
 # McErrors
 Monte carlo error propagation
+
+

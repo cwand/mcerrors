@@ -9,4 +9,4 @@ src/mcerrors.egg-info/SOURCES.txt
 src/mcerrors.egg-info/dependency_links.txt
 src/mcerrors.egg-info/requires.txt
 src/mcerrors.egg-info/top_level.txt
-test/test_python.py
+test/test_core.py
