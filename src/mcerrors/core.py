@@ -14,7 +14,7 @@ class DistVariable:
 
 class Propagator:
 
-	def __init__(self, prop_func: Callable[..., float]) -> None:
+	def __init__(self, prop_func: Callable[[List[float]], float]) -> None:
 		self.func = prop_func
 		self.input_vars: List[DistVariable] = []
 
