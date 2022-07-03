@@ -19,22 +19,22 @@ G_smpls = np.random.poisson(G, 10000).tolist()
 G_var = mcerrors.DistVariable(G_smpls)
 
 # The half-life of the radioactive isotope is 122.24(16) seconds (Gaussian)
-t12_smpls = np.random.normal(122.24, 0.16, 10000)
+t12_smpls = np.random.normal(122.24, 0.16, 10000).tolist()
 t12_var = mcerrors.DistVariable(t12_smpls)
 
 
 # Function to estimate net counting rate in 400 seconds
 def f(x):
 	# unpack input
-	b = x[0] # background
-	g = x[1] # gross rate
-	t12 = x[2] # half life
+	b = x[0]  # background
+	g = x[1]  # gross rate
+	t12 = x[2]  # half life
 
 	# calculate net counting rate now:
-	n = g/30.0 - b/30.0
+	n = g / 30.0 - b / 30.0
 
 	# decay to 40 seconds
-	n400 = n * math.pow(0.5, 400.0/t12)
+	n400 = n * math.pow(0.5, 400.0 / t12)
 	return n400
 
 
