@@ -10,7 +10,7 @@ This is done by drawing random samples from the input distributions and calculat
 
 McErrors is most easily installed with pip:
 ```text
-pip install gspec
+pip install mcerrors
 ```
 
 ## Usage
