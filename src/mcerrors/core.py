@@ -5,20 +5,21 @@ import random
 
 class DistVariable:
 
-    def __init__(self, distribution: List[float]) -> None:
-        self._arr = distribution
+	def __init__(self, distribution: List[float]) -> None:
+		self._arr = distribution
 
-    def sample(self) -> float:
-        return random.choice(self._arr)
+	def sample(self) -> float:
+		return random.choice(self._arr)
 
 
 class Propagator:
 
-    def __init__(self, prop_func: Callable[..., float]) -> None:
-        self.func = prop_func
+	def __init__(self, prop_func: Callable[..., float]) -> None:
+		self.func = prop_func
+		self.input_vars: List[DistVariable] = []
 
-    def addDistVariable(self, variable: DistVariable) -> None:
-        self.input_vars.append(variable)
+	def addDistVariable(self, variable: DistVariable) -> None:
+		self.input_vars.append(variable)
 
-    def propagate(self, samples: int) -> List[float]:
-        
+	def propagate(self, samples: int) -> List[float]:
+		return [0.0]
