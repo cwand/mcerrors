@@ -22,4 +22,16 @@ class Propagator:
 		self.input_vars.append(variable)
 
 	def propagate(self, samples: int) -> List[float]:
-		return [0.0]
+		res = [0.0] * samples
+		n_params = len(self.input_vars)
+		inp = [0.0] * n_params
+		for i in range(0, samples):
+
+			# Sample from input space
+			for j in range(0, n_params):
+				inp[j] = self.input_vars[j].sample()
+
+			# Calculate monte carlo sample from input
+			res[i] = self.func(inp)
+
+		return res
